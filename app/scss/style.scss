@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 
-@import 'variables';
 @import 'mixins';
+@import 'variables';
 @import 'header';
 @import 'hero';
 
@@ -26,4 +26,16 @@ ul {
 
 li {
     list-style: none;
+}
+
+.hide-for-mobile {
+    @include medium {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include large {
+        display: none;
+    }
 }
