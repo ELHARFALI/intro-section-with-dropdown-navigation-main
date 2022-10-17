@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+.header {
+  padding: 23px 16px;
+}
+.header .overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  cursor: pointer;
+  z-index: 2;
+}
+.header .overlay.active {
+  visibility: visible;
+  opacity: 0.2;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.header .navbar .hamburger {
+  display: block;
+}
+.header .navbar .hamburger > span {
+  display: block;
+  width: 33px;
+  height: 3px;
+  background-color: hsl(0deg, 0%, 8%);
+}
+.header .navbar .hamburger > span:not(:last-child) {
+  margin-bottom: 6px;
+}
+.header .side-bar {
+  visibility: hidden;
+  opacity: 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 60%;
+  padding: 20px;
+  background: hsl(0deg, 0%, 98%);
+  transition: all 200ms ease-in-out;
+  z-index: 99;
+}
+.header .side-bar.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+.header .side-bar .lists {
+  margin-bottom: 36px;
+}
+.header .side-bar .lists .close {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 36px;
+}
+.header .side-bar .lists li {
+  position: relative;
+}
+.header .side-bar .lists li a {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  color: hsl(0deg, 0%, 41%);
+}
+.header .side-bar .lists li a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.header .side-bar .lists li a img {
+  margin-left: 0.5rem;
+}
+.header .side-bar .lists li .dropdown {
+  display: none;
+  margin-left: 12px;
+}
+.header .side-bar .lists li .dropdown.active {
+  display: block;
+}
+.header .side-bar .lists li .dropdown li a {
+  display: flex;
+  align-items: center;
+}
+.header .side-bar .lists li .dropdown li a img {
+  width: 0.95rem;
+  margin-right: 16px;
+}
+.header .side-bar .lists li .dropdowncompany {
+  display: none;
+  margin-left: 32px;
+}
+.header .side-bar .lists li .dropdowncompany.active {
+  display: block;
+}
+.header .side-bar .btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .side-bar .btn-primary {
+  padding: 16px 68px;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 16px;
+  transition: all 300ms ease-in-out;
+}
+.header .side-bar .btn-primary:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.header .side-bar .btn-secondary {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 90%;
+  margin-inline: auto;
+  text-align: center;
+  border: 2px solid hsl(0deg, 0%, 41%);
+  border-radius: 18px;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 16px;
+  transition: all 300ms ease-in-out;
+}
+.header .side-bar .btn-secondary:hover {
+  color: hsl(0deg, 0%, 8%);
+  border-color: hsl(0deg, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
