@@ -1,0 +1,111 @@
+@import 'mixins';
+
+.hero {
+    width: 100%;
+    background-color: $Almost-White;
+    
+    @include large {
+        height: calc(100vh - 80px);
+        // height: 100vh;
+    }
+    .container {
+        height: calc(100% - 80px);
+        padding: 40px 170px;
+        display: grid;
+
+        @include large {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding: 20px 140px;
+        }
+
+        .left {
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            flex-direction: column;
+            // min-width: 32.1875rem;
+
+            h1 {
+                
+                @include large {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin-bottom: 37px;
+                    line-height: 1;
+                }
+
+                @include x-large {
+                    font-size: 4.7rem;
+                    font-weight: 700;
+                    margin-bottom: 67px;
+                    line-height: 1;
+                }
+            }
+
+            p {
+                color: $Medium-Gray;
+                line-height: 1.4;
+
+                @include large {
+                    font-size: .9rem;
+                    max-width: 431px;
+                    margin-bottom: 30px;
+                }
+
+                @include x-large {
+                    margin-bottom: 50px;
+                }
+            }
+
+            .btn {
+
+                a {
+                    display: inline-block;
+                    padding: 21px 31px;
+                    color: $Medium-Gray;
+                    border: 2px solid $Medium-Gray;
+                    border-radius: 18px;
+                    transition: all 200ms ease-in-out;
+
+                    &:hover {
+                        color: $Almost-Black;
+                        border-color: $Almost-Black;
+                    }
+
+                    @include x-large {
+                        margin-bottom: 100px;
+                    }
+
+                    @include large {
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+
+            .icons {
+
+                img {
+                    margin-left: 40px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                @include large {
+                    max-width: 100%;
+                }
+
+                @include x-large {
+                    max-width: 70%;
+                }
+            }
+        }
+    }
+}

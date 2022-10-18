@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 .header {
-  max-width: 1440px;
   margin: 0 auto;
   padding: 23px 16px;
+}
+@media (min-width: 1001px) {
+  .header {
+    padding: 23px 36px;
+  }
 }
 .header .overlay {
   visibility: hidden;
@@ -243,6 +247,106 @@
 .header .side-bar .btn-secondary:hover {
   color: hsl(0deg, 0%, 8%);
   border-color: hsl(0deg, 0%, 8%);
+}
+
+.hero {
+  width: 100%;
+  background-color: hsl(0deg, 0%, 98%);
+}
+@media (min-width: 1001px) {
+  .hero {
+    height: calc(100vh - 80px);
+  }
+}
+.hero .container {
+  height: calc(100% - 80px);
+  padding: 40px 170px;
+  display: grid;
+}
+@media (min-width: 1001px) {
+  .hero .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 20px 140px;
+  }
+}
+.hero .container .left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 1001px) {
+  .hero .container .left h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 37px;
+    line-height: 1;
+  }
+}
+@media (min-width: 1400px) {
+  .hero .container .left h1 {
+    font-size: 4.7rem;
+    font-weight: 700;
+    margin-bottom: 67px;
+    line-height: 1;
+  }
+}
+.hero .container .left p {
+  color: hsl(0deg, 0%, 41%);
+  line-height: 1.4;
+}
+@media (min-width: 1001px) {
+  .hero .container .left p {
+    font-size: 0.9rem;
+    max-width: 431px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .hero .container .left p {
+    margin-bottom: 50px;
+  }
+}
+.hero .container .left .btn a {
+  display: inline-block;
+  padding: 21px 31px;
+  color: hsl(0deg, 0%, 41%);
+  border: 2px solid hsl(0deg, 0%, 41%);
+  border-radius: 18px;
+  transition: all 200ms ease-in-out;
+}
+.hero .container .left .btn a:hover {
+  color: hsl(0deg, 0%, 8%);
+  border-color: hsl(0deg, 0%, 8%);
+}
+@media (min-width: 1400px) {
+  .hero .container .left .btn a {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1001px) {
+  .hero .container .left .btn a {
+    margin-bottom: 60px;
+  }
+}
+.hero .container .left .icons img {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+.hero .container .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1001px) {
+  .hero .container .right img {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .hero .container .right img {
+    max-width: 70%;
+  }
 }
 
 * {
