@@ -13,10 +13,29 @@
         padding: 40px 170px;
         display: grid;
 
+        @include medium {
+            padding: 0;
+        }
+
         @include large {
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             padding: 20px 140px;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+
+            @include large {
+                display: none;
+            }
+
+            img {
+                max-width: 100%;
+            }
         }
 
         .left {
@@ -26,6 +45,12 @@
             flex-direction: column;
             // min-width: 32.1875rem;
 
+            @include medium {
+                align-items: center;
+                text-align: center;
+                padding: 0 16px;
+            }
+
             h1 {
                 
                 @include large {
@@ -33,6 +58,10 @@
                     font-weight: 700;
                     margin-bottom: 37px;
                     line-height: 1;
+                }
+
+                @include medium {
+                    margin-bottom: 30px;
                 }
 
                 @include x-large {
@@ -50,6 +79,10 @@
                 @include large {
                     font-size: .9rem;
                     max-width: 431px;
+                    margin-bottom: 30px;
+                }
+
+                @include medium {
                     margin-bottom: 30px;
                 }
 
@@ -77,17 +110,27 @@
                         margin-bottom: 100px;
                     }
 
+                    @include medium {
+                        margin-bottom: 40px;
+                    }
+
                     @include large {
                         margin-bottom: 60px;
                     }
+
+
                 }
             }
 
             .icons {
 
                 img {
-                    margin-left: 40px;
-                    margin-bottom: 20px;
+
+                    &:not(:last-child) {
+                        margin-right: 40px;
+                        margin-bottom: 20px;
+                    }
+                    
                 }
             }
         }
@@ -96,6 +139,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include medium {
+                display: none;
+            }
 
             img {
                 @include large {
